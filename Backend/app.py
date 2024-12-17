@@ -899,9 +899,3 @@ def logout():
     flash("Logged out successfully.")
     return redirect(url_for('index'))
 
-if __name__ == '__main__':
-    # Start the scheduler in a separate thread
-    schedule_thread = threading.Thread(target=schedule_key_rotation)
-    schedule_thread.start()
-
-    app.run()
